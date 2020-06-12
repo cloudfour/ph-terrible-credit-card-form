@@ -7,13 +7,18 @@ const signatureFonts = [
   "qwigley",
   "beanie",
 ];
+const signatureColors = ["black", "blue", "red"];
+
+const randomItem = (array) => {
+  return array[Math.floor(Math.random() * array.length)];
+};
 
 const generateCard = () => {
   const ccNumber = generateNumber();
   const cvv = [0, 0, 0].map((n) => chance.integer({ min: 0, max: 9 })).join("");
-  const cardType = cardTypes[Math.floor(Math.random() * cardTypes.length)];
-  const signatureFont =
-    signatureFonts[Math.floor(Math.random() * signatureFonts.length)];
+  const cardType = randomItem(cardTypes);
+  const signatureFont = randomItem(signatureFonts);
+  const signatureColor = randomItem(signatureColors);
   const name = chance.name();
 
   document.querySelector(".js-card-wrapper").innerHTML = `
@@ -44,7 +49,7 @@ const generateCard = () => {
       <div class="card__content card__content--back">
         <div class="mag_stripe"></div>
 
-        <div class="signature signature--${signatureFont}">
+        <div class="signature signature--${signatureFont} signature--${signatureColor}">
           ${name}
         </div>
 

@@ -112,3 +112,15 @@
 .signature--beanie {
   font-family: "Reenie Beanie", cursive;
 }
+
+.signature--black {
+  color: #0a0a0a;
+}
+
+.signature--blue {
+  color: #1515a5;
+}
+
+.signature--red {
+  color: #ec224d;
+}
