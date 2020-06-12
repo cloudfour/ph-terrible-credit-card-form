@@ -1,8 +1,20 @@
 const cardTypes = ["Chase", "Visa", "CitiBank", "Master Card", "Cloud Four"];
+const signatureFonts = [
+  "dawning",
+  "apple",
+  "flower",
+  "marker",
+  "qwigley",
+  "beanie",
+];
 
 const generateCard = () => {
   const ccNumber = generateNumber();
+  const cvv = [0, 0, 0].map((n) => chance.integer({ min: 0, max: 9 })).join("");
   const cardType = cardTypes[Math.floor(Math.random() * cardTypes.length)];
+  const signatureFont =
+    signatureFonts[Math.floor(Math.random() * signatureFonts.length)];
+  const name = chance.name();
 
   document.querySelector(".js-card-wrapper").innerHTML = `
     <div class="card card--${cardType.replace(" ", "")}">
@@ -25,14 +37,18 @@ const generateCard = () => {
         </div>
 
         <div class="name">
-          ${chance.name().toUpperCase()}
+          ${name.toUpperCase()}
         </div>
       </div>
 
       <div class="card__content card__content--back">
-        <div>
-          Backside
+        <div class="mag_stripe"></div>
+
+        <div class="signature signature--${signatureFont}">
+          ${name}
         </div>
+
+        <div class="cvv">${cvv}</div>
       </div>
     </div>
   `;
