@@ -28,7 +28,7 @@ const generateCard = () => {
           ${cardType}
         </div>
 
-        <img class="chip" src="chip.svg">
+        <img class="chip" src="images/chip.svg">
 
         <div class="number">
           <span>${ccNumber[0]}</span>
