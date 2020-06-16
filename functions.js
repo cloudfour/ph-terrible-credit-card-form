@@ -1,3 +1,8 @@
+// Hard code setting for development purposes
+const defaultSettings = {
+  cardType: "Chase",
+};
+
 const cardTypes = ["Chase", "Visa", "CitiBank", "Master Card", "Cloud Four"];
 const signatureFonts = [
   "dawning",
@@ -16,7 +21,7 @@ const randomItem = (array) => {
 const generateCard = () => {
   const ccNumber = generateNumber();
   const cvv = [0, 0, 0].map((n) => chance.integer({ min: 0, max: 9 })).join("");
-  const cardType = randomItem(cardTypes);
+  const cardType = defaultSettings.cardType || randomItem(cardTypes);
   const signatureFont = randomItem(signatureFonts);
   const signatureColor = randomItem(signatureColors);
   const name = chance.name();
