@@ -22,16 +22,21 @@ const generateCard = () => {
   const ccNumber = generateNumber();
   const cvv = [0, 0, 0].map((n) => chance.integer({ min: 0, max: 9 })).join("");
   const cardType = defaultSettings.cardType || randomItem(cardTypes);
+
+  const cardTypeShortened = cardType.replace(" ", "")
+
   const signatureFont = randomItem(signatureFonts);
   const signatureColor = randomItem(signatureColors);
   const name = chance.name();
 
   document.querySelector(".js-card-wrapper").innerHTML = `
-    <div class="card card--${cardType.replace(" ", "")}">
+    <div class="card card--${cardTypeShortened}">
       <div class="card__content card__content--front">
         <div class="bank">
           ${cardType}
         </div>
+
+        <img class="logo" src="images/${cardTypeShortened}-logo.svg">
 
         <img class="chip" src="images/chip.svg">
 

@@ -1,13 +1,13 @@
 .card--GloboBank {
-  --card-background: url("images/bg1.svg");
+  --card-background: url("images/globo-front.svg");
   --offset-text-color: rgba(255, 255, 255, 0.9);
 }
 
 .card--GloboBank .card__content--back {
-  --card-background: #0b5689;
+  --card-background: url("images/globo-back.svg");
 }
 
-.number {
+.card--GloboBank .number {
   font-size: 1.5em;
   width: 100%;
   text-align: center;
@@ -16,15 +16,36 @@
   top: 60%;
 }
 
-.name {
+.card--GloboBank .name {
   position: absolute;
   bottom: 1em;
   left: 3em;
 }
 
-.expiration {
+.card--GloboBank .expiration {
   position: absolute;
   top: 75%;
   left: 40%;
   font-size: 0.8em;
+}
+
+.card--GloboBank .chip {
+  position: absolute;
+  top: 37%;
+  left: 12%;
+}
+
+.card--GloboBank .logo {
+  position: absolute;
+  right: 2em;
+  top: 1em;
+  width: 4em;
+}
+
+.card--GloboBank .bank {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 1.25em;
+  position: absolute;
+  top: 1.5em;
+  left: 2em;
 }
