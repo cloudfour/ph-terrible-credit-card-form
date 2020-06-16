@@ -3,7 +3,7 @@
   --card-radius: 1.05em;
 
   --card-background: #33b9ff;
-  --card-text: rgba(255, 255, 255, 1);
+  --offset-text-color: rgba(255, 255, 255, 1);
 
   --text-shadow-size: 0.05em;
   --text-shadow-blur: 0.025em;
@@ -19,9 +19,7 @@
 }
 
 .card {
-  color: var(--card-text);
-
-  font-family: ocr-a-std, monospace;
+  color: #fff;
 
   height: 0;
   padding-top: var(--card-aspect-ratio);
@@ -57,7 +55,9 @@
   transform: rotateY(180deg);
 }
 
-.card__content * {
+.offset-text {
+  color: var(--offset-text-color);
+  font-family: ocr-a-std, monospace;
   text-shadow: calc(var(--text-shadow-size) * -1)
       calc(var(--text-shadow-size) * -1) var(--text-shadow-blur)
       var(--text-shadow-color),

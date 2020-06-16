@@ -1,9 +1,9 @@
 // Hard code setting for development purposes
 const defaultSettings = {
-  cardType: "Chase",
+  cardType: "Globo Bank",
 };
 
-const cardTypes = ["Chase", "Visa", "CitiBank", "Master Card", "Cloud Four"];
+const cardTypes = ["Globo Bank", "Cloud Four"];
 const signatureFonts = [
   "dawning",
   "apple",
@@ -35,18 +35,18 @@ const generateCard = () => {
 
         <img class="chip" src="images/chip.svg">
 
-        <div class="number">
+        <div class="number offset-text">
           <span>${ccNumber[0]}</span>
           <span>${ccNumber[1]}</span>
           <span>${ccNumber[2]}</span>
           <span>${ccNumber[3]}</span>
         </div>
 
-        <div class="expiration">
+        <div class="expiration offset-text">
           ${chance.exp()}
         </div>
 
-        <div class="name">
+        <div class="name offset-text">
           ${name.toUpperCase()}
         </div>
       </div>
