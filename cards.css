@@ -32,6 +32,7 @@
 
 .card__content {
   background: var(--card-background);
+  background-size: cover;
   border-radius: var(--card-radius);
 
   box-shadow: 0 0.1em 0.5em 0 rgba(0, 0, 0, 0.35);

@@ -1,6 +1,6 @@
 // Hard code setting for development purposes
 const defaultSettings = {
-  cardType: "Globo Bank",
+  // cardType: "Cloud Four",
 };
 
 const cardTypes = ["Globo Bank", "Cloud Four"];
@@ -23,7 +23,7 @@ const generateCard = () => {
   const cvv = [0, 0, 0].map((n) => chance.integer({ min: 0, max: 9 })).join("");
   const cardType = defaultSettings.cardType || randomItem(cardTypes);
 
-  const cardTypeShortened = cardType.replace(" ", "")
+  const cardTypeShortened = cardType.replace(" ", "");
 
   const signatureFont = randomItem(signatureFonts);
   const signatureColor = randomItem(signatureColors);

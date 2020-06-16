@@ -1,0 +1,15 @@
+.card--CloudFour {
+  --card-background: url("images/c4-front.svg");
+  --offset-text-color: rgba(255, 255, 255, 0.9);
+}
+
+.card--CloudFour .card__content--back {
+  --card-background: url("images/c4-back.svg");
+}
+
+.card--CloudFour .logo {
+  position: absolute;
+  right: 2em;
+  top: 1em;
+  width: 5em;
+}
