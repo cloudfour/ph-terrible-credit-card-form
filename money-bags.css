@@ -1,0 +1,8 @@
+.card--MoneyBags {
+  --card-background: hsl(111, 85%, 35%);
+  --offset-text-color: hsl(111, 85%, 40%);
+}
+
+.card--MoneyBags .offset-text {
+  text-shadow: 0.05em 0.05em 0 #333, -0.05em -0.05em 0 #ddd;
+}

@@ -1,9 +1,9 @@
 // Hard code setting for development purposes
 const defaultSettings = {
-  // cardType: "Cloud Four",
+  cardType: "Money Bags",
 };
 
-const cardTypes = ["Globo Bank", "Cloud Four"];
+const cardTypes = ["Globo Bank", "Cloud Four", "Money Bags"];
 const signatureFonts = [
   "dawning",
   "apple",
