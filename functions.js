@@ -3,7 +3,15 @@ const defaultSettings = {
   cardType: "Money Bags",
 };
 
-const cardTypes = ["Globo Bank", "Cloud Four", "Money Bags"];
+const cardTypes = [
+  "Globo Bank", 
+  "Cloud Four", 
+  "Money Bags",
+  // "Robin Hood",
+  // "Honey",
+  // "Fetch"
+];
+
 const signatureFonts = [
   "dawning",
   "apple",
