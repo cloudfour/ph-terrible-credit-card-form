@@ -22,7 +22,8 @@ h1 {
 button {
   border: none;
   border-radius: 0.2em;
-  background: #18a547;
+  background: #1287cc;
+  border: 0.1em solid #1287cc;
   color: #fff;
   cursor: pointer;
   font-size: 1.25em;
@@ -31,6 +32,7 @@ button {
   width: 8em;
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
   box-shadow: 0 0.05em 0.075em rgba(0, 0, 0, 0.1);
+  margin: 0.5em;
 }
 
 button:hover,
@@ -45,5 +47,7 @@ button:active {
 }
 
 .negative {
-  background: #bc1844;
+  border: 0.1em solid #bc1844;
+  background: transparent;
+  color: #bc1844;
 }
