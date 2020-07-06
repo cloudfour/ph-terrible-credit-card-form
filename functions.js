@@ -1,6 +1,6 @@
 // Hard code setting for development purposes
 const defaultSettings = {
-  cardType: "Money Bags",
+  // cardType: "Money Bags",
 };
 
 const cardTypes = [
