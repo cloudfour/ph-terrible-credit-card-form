@@ -1,3 +1,5 @@
+const wrapper = document.querySelector(".js-card-wrapper");
+
 // Hard code setting for development purposes
 const defaultSettings = {
   // cardType: "Money Bags",
@@ -37,7 +39,7 @@ const generateCard = () => {
   const signatureColor = randomItem(signatureColors);
   const name = chance.name();
 
-  document.querySelector(".js-card-wrapper").innerHTML = `
+  wrapper.innerHTML = `
     <div class="card card--${cardTypeShortened}">
       <div class="card__content card__content--front">
         <div class="bank">
@@ -75,7 +77,15 @@ const generateCard = () => {
       </div>
     </div>
   `;
+
+  wrapper.classList.add('is-visible');
 };
+
+const updateCard = () => {
+  wrapper.classList.remove('is-visible');
+
+  setTimeout(generateCard, 300);
+}
 
 const generateNumber = () => {
   const ccNumber = chance.cc();
@@ -89,7 +99,7 @@ const generateNumber = () => {
 };
 
 const bindButtons = () => {
-  document.querySelector(".js-deny").addEventListener("click", generateCard);
+  document.querySelector(".js-deny").addEventListener("click", updateCard);
 };
 
 const initInterface = () => {

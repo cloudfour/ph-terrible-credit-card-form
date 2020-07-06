@@ -16,6 +16,13 @@
   margin: 2em 0;
 
   perspective: 80em;
+
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.card-wrapper.is-visible {
+  opacity: 1;
 }
 
 .card {
