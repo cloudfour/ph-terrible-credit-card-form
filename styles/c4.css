@@ -1,10 +1,10 @@
 .card--CloudFour {
-  --card-background: url("images/c4-front.svg");
+  --card-background: url("../images/c4-front.svg");
   --offset-text-color: rgba(255, 255, 255, 0.9);
 }
 
 .card--CloudFour .card__content--back {
-  --card-background: url("images/c4-back.svg");
+  --card-background: url("../images/c4-back.svg");
 }
 
 .card--CloudFour .logo {

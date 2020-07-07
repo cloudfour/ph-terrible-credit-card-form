@@ -1,10 +1,10 @@
 .card--GloboBank {
-  --card-background: url("images/globo-front.svg");
+  --card-background: url("../images/globo-front.svg");
   --offset-text-color: rgba(255, 255, 255, 0.9);
 }
 
 .card--GloboBank .card__content--back {
-  --card-background: url("images/globo-back.svg");
+  --card-background: url("../images/globo-back.svg");
 }
 
 .card--GloboBank .number {
