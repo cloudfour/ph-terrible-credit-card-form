@@ -95,6 +95,7 @@
   min-width: 10em;
   padding: 0 0.25em;
   display: inline-block;
+  position: relative;
 }
 
 .signature--dawning {
@@ -131,4 +132,24 @@
 
 .signature--red {
   color: #ec224d;
+}
+
+.signature::before {
+  content: "Not Valid Unless Signed";
+  color: #fff;
+  font-family: sans-serif;
+  position: absolute;
+  top: -1.5em;
+  left: 0;
+  font-size: 0.5em;
+}
+
+.expiration::before {
+  content: "Expires";
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.cvv {
+  font-style: italic;
 }

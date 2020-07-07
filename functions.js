@@ -2,7 +2,7 @@ const wrapper = document.querySelector(".js-card-wrapper");
 
 // Hard code setting for development purposes
 const defaultSettings = {
-  // cardType: "Money Bags",
+  cardType: "Globo Bank",
 };
 
 const cardTypes = [
