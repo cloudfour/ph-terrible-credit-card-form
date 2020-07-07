@@ -1,0 +1,20 @@
+.card--VennDiagram {
+  --card-background: url("../images/venn-front.svg");
+}
+
+.card--VennDiagram .card__content--back {
+  --card-background: url("../images/venn-back.svg");
+}
+
+.card--VennDiagram .logo {
+  position: absolute;
+  bottom: 1.25em;
+  right: 1.25em;
+  width:6em;
+}
+
+.card--VennDiagram .bank {
+  font-family: 'helvetica', 'sans-serif';
+  font-weight: 500;
+  font-style: italic;
+}
