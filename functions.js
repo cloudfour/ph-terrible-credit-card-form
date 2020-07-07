@@ -100,6 +100,9 @@ const generateNumber = () => {
 
 const bindButtons = () => {
   document.querySelector(".js-deny").addEventListener("click", updateCard);
+  document.querySelector(".js-accept").addEventListener("click", () => {
+    alert("I don't believe you! Try again...");
+  });
 };
 
 const initInterface = () => {
