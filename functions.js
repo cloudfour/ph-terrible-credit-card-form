@@ -2,7 +2,7 @@ const wrapper = document.querySelector(".js-card-wrapper");
 
 // Hard code setting for development purposes
 const defaultSettings = {
-  cardType: "Globo Bank",
+  cardType: "VennDiagram",
 };
 
 const cardTypes = [
@@ -12,6 +12,7 @@ const cardTypes = [
   // "Robin Hood",
   // "Honey",
   // "Fetch"
+  "VennDiagram"
 ];
 
 const signatureFonts = [
