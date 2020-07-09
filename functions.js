@@ -2,16 +2,17 @@ const wrapper = document.querySelector(".js-card-wrapper");
 
 // Hard code setting for development purposes
 const defaultSettings = {
-  // cardType: "VennDiagram",
+  cardType: "World Bank",
 };
 
 const cardTypes = [
   "Globo Bank", 
   "Cloud Four", 
-  // "Money Bags",
+  "Money Bags",
   // "Robin Hood",
   // "Honey",
   // "Fetch"
+  "World Bank",
   "VennDiagram"
 ];
 

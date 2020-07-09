@@ -1,0 +1,7 @@
+.card--WorldBank {
+  --card-background: url("../images/world-front.svg");
+}
+
+.card--WorldBank .card__content--back {
+  --card-background: #001c72;
+}
