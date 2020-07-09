@@ -7,74 +7,10 @@
   --card-background: url("../images/globo-back.svg");
 }
 
-.card--GloboBank .number {
-  font-size: 1.5em;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  left: 0;
-  top: 60%;
-}
-
-.card--GloboBank .name {
-  position: absolute;
-  bottom: 1em;
-  left: 3em;
-}
-
-.card--GloboBank .expiration {
-  position: absolute;
-  top: 73%;
-  left: 40%;
-  font-size: 0.8em;
-}
-
-.card--GloboBank .expiration::before {
-  margin-bottom: 0.1em;
-  display: block;
-}
-
-.card--GloboBank .chip {
-  position: absolute;
-  top: 37%;
-  left: 12%;
-}
-
-.card--GloboBank .logo {
-  position: absolute;
-  right: 2em;
-  top: 1em;
-  width: 4em;
-}
-
 .card--GloboBank .bank {
   font-family: "Arial Black", Gadget, sans-serif;
-  font-size: 1.25em;
-  position: absolute;
-  top: 1.5em;
-  left: 2em;
-}
-
-.card--GloboBank .signature,
-.card--GloboBank .cvv {
-  height: 1.9rem;
-  margin-top: 0;
-  position: absolute;
-  top: 40%;
 }
 
 .card--GloboBank .signature {
   background: #eed;
-}
-
-.card--GloboBank .cvv {
-  background: #fff;
-  color: #121;
-  padding: 0.45em;
-  letter-spacing: 0.1em;
-  left: 60%;
-}
-
-.card--GloboBank .signature {
-  width: 60%;
 }
