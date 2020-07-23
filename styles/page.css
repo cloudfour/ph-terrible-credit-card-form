@@ -1,3 +1,7 @@
+:root {
+  --page-bg: #eeeefc;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +12,6 @@ html {
 
 body {
   font-family: sans-serif;
-  max-width: 28em;
   margin: 2em auto;
   display: flex;
   flex-direction: column;

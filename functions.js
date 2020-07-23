@@ -2,13 +2,13 @@ const wrapper = document.querySelector(".js-card-wrapper");
 
 // Hard code setting for development purposes
 const defaultSettings = {
-  cardType: "World Bank",
+  // cardType: "World Bank",
 };
 
 const cardTypes = [
   "Globo Bank", 
   "Cloud Four", 
-  "Money Bags",
+  // "Money Bags",
   // "Robin Hood",
   // "Honey",
   // "Fetch"
@@ -30,7 +30,7 @@ const randomItem = (array) => {
   return array[Math.floor(Math.random() * array.length)];
 };
 
-const generateCard = () => {
+const generateCard = (isEntering) => {
   const ccNumber = generateNumber();
   const cvv = [0, 0, 0].map((n) => chance.integer({ min: 0, max: 9 })).join("");
   const cardType = defaultSettings.cardType || randomItem(cardTypes);
@@ -41,8 +41,8 @@ const generateCard = () => {
   const signatureColor = randomItem(signatureColors);
   const name = chance.name();
 
-  wrapper.innerHTML = `
-    <div class="card card--${cardTypeShortened}">
+  wrapper.insertAdjacentHTML('beforeend', `
+    <div class="card card--${cardTypeShortened} ${isEntering ? 'is-entering': ''}">
       <div class="card__content card__content--front">
         <div class="bank">
           ${cardType}
@@ -78,15 +78,30 @@ const generateCard = () => {
         <div class="cvv">${cvv}</div>
       </div>
     </div>
-  `;
+  `);
 
-  wrapper.classList.add('is-visible');
+  document.querySelector('.card.is-current')
 };
 
 const updateCard = () => {
-  wrapper.classList.remove('is-visible');
+  const oldCard = document.querySelector('.card.is-current');
 
-  setTimeout(generateCard, 300);
+  if(oldCard) {
+    oldCard.addEventListener('transitionend', () => {
+      oldCard.parentNode.removeChild(oldCard);
+    });
+    oldCard.classList.add('is-exiting');
+    oldCard.classList.remove('is-current');
+  }
+
+  generateCard(true);
+
+  const newCard = document.querySelector('.card.is-entering');
+  // Trigger a rewflow before toggling classes
+  newCard.offsetHeight;
+  // Trigger animation
+  newCard.classList.add('is-current');
+  newCard.classList.remove('is-entering');
 }
 
 const generateNumber = () => {
@@ -108,7 +123,8 @@ const bindButtons = () => {
 };
 
 const initInterface = () => {
-  generateCard();
+  generateCard(false);
+  document.querySelector('.card').classList.add('is-current');
   bindButtons();
 };
 
